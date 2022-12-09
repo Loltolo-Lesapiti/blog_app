@@ -59,7 +59,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 BLOG APP WITH ROR <a name="about-project"></a>
 
-The Blog app will be a classic example of a blog website. You will creat a fully functional website that will show the list of post and empower readers to interact with them by adding comments and likes posts
+This project creates a blog-app website.A fully functional website that will show the list of post and users can interact by adding comments and liking posts.
 
 ## 🛠 Built With <a name="built-with"></a>
 
