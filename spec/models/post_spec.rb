@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   subject(:post) { Post.create(title: 'First post', comments_counter: 1, likes_counter: 15) }
-
   it 'should have a title' do
     expect(post.title).to eq('First post')
   end

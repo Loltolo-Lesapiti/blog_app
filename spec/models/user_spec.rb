@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   subject(:user) { User.create(name: 'Loltolo', photo: 'https://avatars.githubusercontent.com/u/25284722?s=40&v=4', bio: 'Full stack developer', post_counter: 1) }
-
   it 'should have a name' do
     user.name = nil
     expect(user).to be_valid
