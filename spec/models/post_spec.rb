@@ -26,7 +26,7 @@ RSpec.describe Post, type: :model do
     post.comments_counter = nil
     expect(post).to_not be_valid
   end
-  
+
   it 'comments count should not be less than than 0' do
     post.comments_counter = -1
     expect(post).to_not be_valid
