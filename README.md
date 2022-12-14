@@ -59,7 +59,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 BLOG APP WITH ROR <a name="about-project"></a>
 
-This project creates a blog-app website.A fully functional website that will show the list of post and users can interact by adding comments and liking posts. This milestone sets up our models with Users, Posts, Comments, and Likes table.
+This project creates a blog-app website.A fully functional website that will show the list of post and users can interact by adding comments and liking posts. This milestone implements modal validation and testing.
 
 ## 🛠 Built With <a name="built-with"></a>
 
