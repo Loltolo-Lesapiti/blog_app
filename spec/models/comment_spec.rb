@@ -31,10 +31,9 @@ RSpec.describe Comment, type: :model do
       @post = Post.create(author: @user, title: 'Second Post', text: 'This is my second post')
       @comment = Comment.create(post: @post, author: @user, text: 'Nice one here!')
     end
-  
+
     it 'should increment the comments counter' do
       expect(@post.comments_counter).to eq 1
     end
   end
 end
-
