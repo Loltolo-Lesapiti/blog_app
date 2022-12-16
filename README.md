@@ -24,10 +24,10 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./public/murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Blog website</b></h3>
 
 </div>
 
@@ -57,29 +57,28 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 BLOG APP WITH ROR <a name="about-project"></a>
+# 📖 Blog <a name="about-project"></a>
 
-This project creates a blog-app website.A fully functional website that will show the list of post and users can interact by adding comments and liking posts. This milestone implements modal validation and testing.
+> This project creates a blog-app website.A fully functional website that will show the list of post and users can interact by adding comments and liking posts. This milestone implements modal validation and testing.
 
 ## 🛠 Built With <a name="built-with"></a>
 
--ROR
-
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> This Project was Build with the following:
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Server</summary>
+  <summary>Unit Testing</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://rspec.info/">Rspec</a></li>
   </ul>
 </details>
 
@@ -92,96 +91,110 @@ This project creates a blog-app website.A fully functional website that will sho
 
 <!-- Features -->
 
+### Key Features <a name="key-features"></a>
+
+> The Following are key features of this blog website
+
+- [x] **A user can display a list of posts**
+- [x] **A user can add a comment to a post**
+- [x] **A user can can like a post.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Add a link to your deployed project.
+
+- [Coming soon....](https://yourdeployedapplicationlink.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+> The following steps were used in creating this project:
 
-To get a local copy up and running, follow these steps.
+1 Setup the project by creating a new directory from the generated repository.
+
+2 Set up the repository on GitHub and use Gitflow.
+
+3 Initialized project with rubocop linters
+
+> To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
 
-Ruby version : ruby 3.1.2p20 run ruby -v
-Ruby SQLite3 : 3.40.0 run sqlite3 --version
-npm version : 8.15.0 run npm -v
-yarn version : 1.22.19 run yarn -v
-Database : PostgreSQL
+1 Ruby installed (Using Homebrew on macOS machine)
+
+```sh
+brew install ruby
+```
+
+2 Rails Installed
+
+```sh
+gem install rails
+```
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
-  cd my-folder
-  git clone https://github.com/X-Elie-X/Blog-app.git
+  git clone https://github.com/Loltolo-Lesapiti/blog_app.git
 ```
---->
 
 ### Install
 
 Install this project with:
 
-<!--
-bundler install
-
 ```sh
-
+  cd blog
+```
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
+```sh
+   cd blog
+```
+
+```sh
+   code .
+```
+
+### Run project
+
+To run from the local server, run the following command:
 
 ```sh
   rails server
 ```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
 ```sh
-  bin/rails test test/models/article_test.rb
+  rpec spec
 ```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
+## Author
 
-👤**Petro Loltolo Lesapiti**
+👤 **Petro Loltolo Lesapiti**
 
-- GitHub: [@loltolo-lesapiti](https://github.com/Loltolo-Lesapiti)
+- GitHub: [@petrolesapiti](https://github.com/Loltolo-Lesapiti)
+- LinkedIn: [@petrolesapiti](https://www.linkedin.com/in/petrolesapitiloltolo/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -195,7 +208,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
+> Your contructive reviews help us to improve progressively
 
 If you like this project...
 
@@ -205,18 +218,32 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
+> [Microverse](https://www.microverse.org/?grsf=0gzf37)
 
-I would like to thank...
+I would like to thank the Microverse for offering this topic notch course that has equiped me to be a full stack Ruby on Rails Developer
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
+## ❓ FAQ <a name="faq"></a>
+
+> You want to know! Relax! We got you!
+
+- **How Long did it take to build this project?**
+
+  - [x] 5 days
+
+- **How many git conflicts did you resolve?**
+
+  - [x] More than five (5) conflicts resolved
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
