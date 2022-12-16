@@ -45,9 +45,19 @@ RSpec.describe Post, type: :model do
     post.likes_counter = -1
     expect(post).to_not be_valid
   end
-
-  it 'should return the most recent comments' do
-    comments = subject.recent_comments
-    expect(comments).to eq(subject.comments.order(created_at: :desc).limit(5))
+  context 'test posts' do
+    before :each do
+      @user = User.create(name: 'Loltolo', photo: '', bio: 'Software Developer')
+      @post = Post.create(author: @user, title: 'Third post', text: 'Im making the third one here')
+    end
+    it 'should return the 5 most recent posts' do
+      Comment.create(post: @post, author: @user, text: 'One')
+      Comment.create(post: @post, author: @user, text: 'Two')
+      Comment.create(post: @post, author: @user, text: 'Three')
+      Comment.create(post: @post, author: @user, text: 'Four')
+      Comment.create(post: @post, author: @user, text: 'Five')
+      Comment.create(post: @post, author: @user, text: 'Six')
+      expect(@post.recent_comments.length) == 5
+    end
   end
 end

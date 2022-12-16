@@ -30,4 +30,13 @@ RSpec.describe User, type: :model do
     user.post_counter = -1
     expect(user).to_not be_valid
   end
+  it 'should return 3 most recent posts' do
+    Post.create(author: user, title: 'Title1', text: 'First text')
+    Post.create(author: user, title: 'Title2', text: 'Seond text')
+    Post.create(author: user, title: 'Title3', text: 'Third text')
+    Post.create(author: user, title: 'Title4', text: 'Forth text')
+    Post.create(author: user, title: 'Title5', text: 'Fift text')
+    Post.create(author: user, title: 'Title6', text: 'Sixth text')
+    expect(user.recent_posts.length) == 3
+  end
 end
