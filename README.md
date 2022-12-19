@@ -59,7 +59,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Blog <a name="about-project"></a>
 
-> This project creates a blog-app website.A fully functional website that will show the list of post and users can interact by adding comments and liking posts. In this milestone, I created users and posts controllers and views with four routes.
+> This project creates a blog-app website.A fully functional website that will show the list of post and users can interact by adding comments and liking posts. In this milestone, I set up tests on the posts and users controller controllers.
 
 ## 🛠 Built With <a name="built-with"></a>
 
