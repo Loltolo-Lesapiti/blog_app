@@ -1,35 +1,49 @@
-*{
-    font-family: 'Courier New', monospace;
-    text-decoration: none;
-    color: unset;
+* {
+  font-family: 'Courier New', monospace;
+  text-decoration: none;
+  color: unset;
 }
-.all-users, .user-page,.posts,.full_post{
-    display: flex;
-    flex-direction: column;
-    gap:10px
+
+.all-users,
+.user-page,
+.posts,
+.full_post {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.user_container{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+
+.user_container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
-.user-details{
-    border: solid 2px black;
-    width: 20%;
+
+.user-details {
+  border: solid 2px black;
+  width: 20%;
 }
-.user-details span,.like-and-comment{
-    float: right;
+
+.user-details span,
+.like-and-comment {
+  float: right;
 }
-.user-bio,.post, .post_body, .post-section{
-    border: solid 2px black;
+
+.user-bio,
+.post,
+.post_body,
+.post-section {
+  border: solid 2px black;
 }
-button{
-    height: 30px;
-    width: 200px;
-    align-self: center;
+
+button {
+  height: 30px;
+  width: 200px;
+  align-self: center;
 }
-.post_header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
+.post_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
