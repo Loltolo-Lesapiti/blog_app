@@ -1,1 +1,8 @@
-<h1> Users page </h1>
+
+<div class="all-users">
+<% @users.each do |user| %>
+    <%= link_to(user) do %>
+      <%= render "shared/user_details", user: user %>
+    <%end%>
+  <%end%>
+</div>
