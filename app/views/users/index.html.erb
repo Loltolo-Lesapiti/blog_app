@@ -1,8 +1,8 @@
 <h1>Blog App</h1>
-<div class="users">
+<div class="users-card">
     <% @users.each do |user| %>
         <div class="card">
-            <img class="user-img" src=<%= user.photo %> alt=<%= 'photo' %>>
+            <img class="img" src=<%= user.photo %> alt=<%= 'photo' %>>
             <div class="card-content">
                 <a class="username" href="users/<%= user.id %>"><%= user.name %></a>
                 <div class="postscount">
