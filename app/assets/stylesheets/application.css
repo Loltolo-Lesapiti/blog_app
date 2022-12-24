@@ -1,49 +1,81 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
 * {
-  font-family: 'Courier New', monospace;
-  text-decoration: none;
-  color: unset;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.all-users,
-.user-page,
-.posts,
-.full_post {
+a {
+  text-decoration: none;
+  color: rgb(237, 17, 13);
+}
+
+body {
+  background-color: rgb(216, 211, 211);
+}
+
+.users-container {
+  margin: 10px 30px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
-.user_container {
+.card {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 30px;
+  padding: 10px;
+  background-color: #f3f3f3;
+  margin: 20px;
+  border-radius: 10px;
 }
 
-.user-details {
-  border: solid 2px black;
+.user-img {
   width: 20%;
 }
 
-.user-details span,
-.like-and-comment {
-  float: right;
+.username {
+  font-size: 20px;
 }
 
-.user-bio,
-.post,
-.post_body,
-.post-section {
-  border: solid 2px black;
+.postscount {
+  padding: 20px 0;
 }
 
-button {
-  height: 30px;
-  width: 200px;
-  align-self: center;
+.posts-btn,
+.comment-btn,
+.like-btn {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: rgb(4, 145, 35);
+  color: #f3f3f3;
+  border: none;
+  font-size: 18px;
+  margin: 5px;
 }
 
-.post_header {
+.createpost {
+  margin: 30px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input {
+  margin: 10px 0;
 }
