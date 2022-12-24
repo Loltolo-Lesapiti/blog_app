@@ -4,8 +4,21 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Ignore node modules
+node_modules/
+
+# Ignore env file
+.env
+
+# ignore query helper
+query_helper.rb
+
 # Ignore bundler config.
 /.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -29,4 +42,3 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-/node_modules
