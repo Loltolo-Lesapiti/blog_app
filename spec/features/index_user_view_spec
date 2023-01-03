@@ -1,0 +1,35 @@
+require 'rails_helper'
+
+RSpec.describe 'User features', type: :system do
+  subject do
+    @user = User.create(
+      name: 'Tom',
+      posts_counter: 5,
+      bio: 'Teacher from Mexico.',
+      photo: 'https://unsplash.com/photos/F_-0BxGuVvo'
+    )
+  end
+
+  describe 'User Index page', js: true do
+    it 'displays the username of all other users.' do
+      visit users_path(subject)
+      expect(page).to have_content('Tom')
+    end
+
+    it 'displays the the profile picture for each user.' do
+      visit users_path(subject)
+      page.has_content?('Screenshot Image')
+      expect(page).to have_css('img')
+    end
+
+    it 'display the user bio' do
+      visit users_path(subject)
+      page.has_content?(@user.bio.to_s)
+    end
+
+    it 'When I click on a user, I am redirected to that user show page.' do
+      visit users_path(@user)
+      expect(current_path).to eq(users_path(@user))
+    end
+  end
+end

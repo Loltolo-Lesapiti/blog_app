@@ -1,0 +1,40 @@
+require 'rails_helper'
+
+RSpec.describe 'Post index page', type: :system do
+  describe 'testing for user post index page', js: true do
+    it 'display the title of the post' do
+      visit('/users/1/posts/1')
+      expect(page).to have_content('Software Development')
+    end
+
+    it 'displays the user profile picture.' do
+      visit('/users/1/posts/1')
+      expect(page).to have_content('Tom')
+    end
+
+    it 'I can see how many comments a post has.' do
+      visit('/users/1/posts/1')
+      expect(page).to have_content('Comments counter: 1')
+    end
+
+    it 'I can see how many likes a post has.' do
+      visit('/users/1/posts/1')
+      expect(page).to have_content('Likes counter: 1')
+    end
+
+    it 'I can see some of the post body' do
+      visit('/users/1/posts/1')
+      expect(page).to have_content('Title: Software Development')
+    end
+
+    it 'I can see the username of each commentor.' do
+      visit('/users/1/posts/1')
+      expect(page).to have_content('Tom')
+    end
+
+    it 'I can see the comment each commentor left.' do
+      visit('/users/1/posts/1')
+      page.has_content?('Tom: Awesome.')
+    end
+  end
+end

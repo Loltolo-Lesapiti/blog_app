@@ -1,0 +1,41 @@
+require 'rails_helper'
+RSpec.describe 'Users', type: :system do
+  describe 'User show page', js: true do
+    it 'displays users profile.' do
+      visit('users/1')
+      page.has_content?('Screenshot Image')
+      expect(page).to have_css('img')
+    end
+    it 'displays the user profile picture.' do
+      visit('users/1')
+      expect(page).to have_content('Tom')
+    end
+    it 'display user posts.' do
+      visit('users/1')
+      expect(page).to have_content('5')
+    end
+    it 'display user bio' do
+      visit('users/1')
+      expect(page).to have_content('Teacher from Mexico.')
+    end
+    it 'display the user first 2 posts' do
+      visit('users/1')
+      expect(page).to have_content('Software Development')
+      expect(page).to have_content('Collaboration')
+    end
+    it 'display view all users button.' do
+      visit('users/1')
+      expect(page).to have_content('See all posts')
+    end
+    it 'When see all is clicked, it redirected to all posts' do
+      visit('users/1')
+      click_button('See all posts')
+      expect(page).to have_current_path('/users/1/posts')
+    end
+    # it 'redirects to a particular post when one post is clicked from the list' do
+    #   visit('/users/1/posts')
+    #   click_button('See all posts')
+    #   expect(page).to have_current_path('/users/1/posts/1')
+    # end
+  end
+end
