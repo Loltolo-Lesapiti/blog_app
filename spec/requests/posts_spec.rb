@@ -1,29 +1,37 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  describe 'GET /index' do
-    before(:example) { get '/users/1/posts' }
-    it 'is a success' do
-      expect(response).to have_http_status(:ok)
+  describe 'GET/index' do
+    it 'should pass with status 200' do
+      get '/users/120/posts'
+      expect(response.status).to eql(200)
     end
-    it 'renders the index template' do
-      expect(response).to render_template('index')
+
+    it 'should render correct template' do
+      get '/users/120/posts'
+      expect(response).to render_template(:index)
     end
-    it 'should includes the static text' do
-      expect(response.body).to include('List of all the posts')
+
+    it 'should include correct text' do
+      get '/users/120/posts'
+      expect(response.body).to include('List of posts by given user')
     end
   end
 
-  describe 'GET /show' do
-    before(:example) { get '/users/1/posts/1' }
-    it 'is a success' do
-      expect(response).to have_http_status(:ok)
+  describe 'GET/show' do
+    it 'should pass with status 200' do
+      get '/users/120/posts/20'
+      expect(response.status).to eql(200)
     end
-    it 'renders the show template' do
-      expect(response).to render_template('show')
+
+    it 'should render correct template' do
+      get '/users/120/posts/20'
+      expect(response).to render_template(:show)
     end
-    it 'should includes the static text' do
-      expect(response.body).to include('This is a post made by a user')
+
+    it 'should include correct text' do
+      get '/users/120/posts/20'
+      expect(response.body).to include('List of post by given id')
     end
   end
 end
